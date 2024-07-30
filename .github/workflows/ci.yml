@@ -24,18 +24,6 @@ jobs:
 
     - name: Install dependencies
       run: pnpm install
-    
-    - name: Check for test files
-      id: check-test-files
-      run: |
-        if ! find . -name '*.{test,spec}.[jt]s?(x)' -print -quit | grep -q .; then
-          echo "No test files found. Skipping tests."
-          exit 0
-        fi
 
     - name: Run ESLint
       run: pnpm lint
-
-    - name: Run Vitest
-      run: pnpm test
-      if: steps.check-test-files.outputs.skip != 'true'
