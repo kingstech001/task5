@@ -26,6 +26,8 @@ const SignIn: React.FC = () => {
     <div className="flex justify-center items-center h-screen bg-background">
       <div className="w-full max-w-md bg-card rounded p-6">
         <h1 className="text-2xl font-bold mb-4 text-center">Sign In</h1>
+        <p className="text-center text-gray-400">Welcome back, you have been missed!</p>
+
         <div className="mt-4 sm:flex items-center gap-2 ">
           <div className="w-full text-black  py-2 rounded border mb-2 flex items-center gap-2 justify-center">
           <Image src="/images/flat-color-icons_google.png" alt="Logo" width={20} height={20} />
