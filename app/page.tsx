@@ -1,14 +1,16 @@
-import Link from 'next/link'
+import React from 'react';
+import Navbar from './components/Navbar';
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-     <div>
-       <h1>onvey</h1>
-      <Link href='/'></Link>
-     </div>
- 
-    </main>
+    <>
+      <Navbar />
+      <div className="container mx-auto p-4">
+        <h1 className="text-4xl font-bold">Welcome to MyApp</h1>
+        <p className="mt-4 text-lg">This is the homepage content.</p>
+      </div>
+    </>
   );
-}
+};
+
+export default HomePage;
